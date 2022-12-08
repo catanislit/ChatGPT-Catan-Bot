@@ -1,0 +1,62 @@
+// 
+imma store all the sample code chatGPT gives me for my catan bot here.
+IDFK how to code like that, I just took some CS courses in college and then kinda dipped before things got too hard.
+But, chatGPT's kinda lit so imma fuck around (and find out). also, did you know Uncle Roger had one of these?
+//
+
+
+//
+To make a data structure that represents the state of a game of Catan, you'll need to consider what information is relevant to the game 
+and how you can represent that information in a way that a computer can understand. One way to do this might be to create an object that 
+stores the positions of the settlements and roads, the resources each player has, and any other information that is relevant to the game. 
+For example, you could create a GameState class with properties like settlements, roads, and players, where each property is an array or 
+collection of objects that represent the relevant information.
+//
+
+class GameState {
+  constructor() {
+    this.settlements = [];
+    this.roads = [];
+    this.players = [];
+  }
+}
+
+//
+This GameState class defines a data structure that can be used to represent the state of a game of Catan. It 
+has three properties: settlements, roads, and players, which are all initially empty arrays. To use this class, 
+you would create an instance of the GameState class and then populate its properties with information about the 
+game. For example, you might add code to track the positions of the settlements and roads on the game board, and 
+to store information about the resources each player has. Here's an example of how you might do this:
+//
+const gameState = new GameState();
+
+// Track the positions of the settlements and roads on the game board
+gameState.settlements.push({ x: 3, y: 4 });
+gameState.settlements.push({ x: 5, y: 6 });
+gameState.roads.push({ startX: 3, startY: 4, endX: 5, endY: 6 });
+
+// Store information about the resources each player has
+gameState.players.push({
+  id: 1,
+  resources: {
+    wood: 5,
+    brick: 4,
+    sheep: 3,
+    wheat: 2,
+    ore: 1
+  }
+});
+gameState.players.push({
+  id: 2,
+  resources: {
+    wood: 4,
+    brick: 3,
+    sheep: 2,
+    wheat: 1,
+    ore: 0
+  }
+});
+//
+In this example, the gameState object is an instance of the GameState class, and it stores information about the 
+positions of the settlements and roads on the game board, as well as information about the resources each player has.
+//
